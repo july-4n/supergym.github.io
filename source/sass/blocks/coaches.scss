@@ -1,0 +1,18 @@
+.coaches__body {
+  max-width: 1366px;
+  padding: 0 47px 120px 47px;
+  margin: 0 auto;
+}
+
+.coaches__body h2 {
+  @include reset-list();
+  @include font(49px, 49px, 700);
+  margin-left: 58px;
+  margin-bottom: 62px;
+  font-family: $addition-font;
+  letter-spacing: 0.03em;
+}
+
+.coaches__slider {
+  display: flex;
+}

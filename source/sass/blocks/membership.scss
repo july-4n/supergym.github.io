@@ -1,0 +1,29 @@
+.membership__body {
+  max-width: 1366px;
+  padding: 120px 103px;
+  margin: 0 auto;
+}
+
+.membership h2 {
+  @include reset-list();
+  @include font(49px, 49px, 400);
+  margin-bottom: 53px;
+  font-family: $addition-font;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.membership__duration {
+  @include reset-list();
+  @include font(20px, 30px, 400);
+  display: flex;
+  // margin: 0 auto;
+  margin-bottom: 50px;
+  // text-align: center;
+}
+
+.membership__value {
+
+}
+// @media (max-width: $tablet-width) {}
+// @media (max-width: $mobile-width) {}

@@ -1,0 +1,260 @@
+.promo__body {
+  max-width: 1366px;
+  padding: 120px 103px;
+  margin: 0 auto;
+}
+
+.promo h2 {
+  @include reset-list();
+  @include font(49px, 49px, 700);
+  margin-bottom: 50px;
+  font-family: $addition-font;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__main-info {
+  display: flex;
+}
+
+.promo__info {
+  display: flex;
+  width: 100%;
+  margin-right: 3.5%;
+}
+
+.promo__text {
+  width: 50%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: #ED0233;
+}
+
+.promo__text h3 {
+  @include reset-list();
+  @include font(28px, 44px, 700);
+  color: $main-color;
+}
+
+.promo__text span {
+  @include font(70px, 53px, 700);
+  display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: 27px;
+  color: $main-color;
+}
+
+.promo__text p {
+  @include reset-list();
+  @include font(18px, 25px, 400);
+  max-width: 189px;
+  margin-bottom: 187px;
+  text-align: left;
+  color: $main-color;
+}
+
+.promo__text a {
+  @include font(14px, 16px);
+  display: inline-block;
+  vertical-align: baseline;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main-color;
+  border-bottom: 1px solid $main-color;
+}
+
+.promo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.promo__img img{
+  display: block;
+  width: 280px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promo__offer {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  height: 211px;
+  text-align: left;
+  color: $text;
+  background-image: url(../img/fr.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.promo__offer h3 {
+  @include reset-list();
+  @include font(26px, 50px, 700);
+  margin: 18px 0 0 34px;
+}
+
+
+.promo__offer b {
+  @include reset-list();
+  @include font(16px, 22px);
+  margin-bottom: 70px;
+  margin-left: 34px;
+}
+
+
+.promo__offer a {
+  @include font(12px, 14px, 700);
+  position: relative;
+  display: inline;
+  margin-bottom: 38px;
+  margin-left: 34px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 10;
+
+    width: 69px;
+    height: 1px;
+
+    background-color: $text;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo__body {
+    width: 768px;
+    padding: 100px 45px;
+  }
+
+  .promo h2 {
+    @include font(42px, 42px, 700);
+    margin-bottom: 39px;
+  }
+
+  .promo__main-info {
+    flex-direction: column;
+  }
+
+  .promo__info {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo__text {
+    width: 41.1%;
+    padding: 5% 6.5%;
+  }
+
+  .promo__img img{
+    width: 399px;
+  }
+
+  .promo__details {
+    flex-direction: row;
+  }
+
+  .promo__offer {
+    width: 324px;
+    background-image: url(../img/frame-tablet.svg);
+  }
+
+  .promo__offer--free b {
+    max-width: 153px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo__body {
+    width: 320px;
+    padding: 70px 15px;
+  }
+
+  .promo h2 {
+    @include font(32px, 32px, 700);
+    margin-bottom: 42px;
+  }
+
+  .promo__main-info {
+    flex-direction: column;
+  }
+
+  .promo__info {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo__text {
+    width: 100%;
+    text-align: center;
+    padding: 35px 0 45px;
+  }
+
+  .promo__text p {
+    text-align: center;
+    margin: 0 auto 28px;
+  }
+
+  .promo__text span {
+    margin-bottom: 22px;
+  }
+  .promo__img img{
+    width: 290px;
+  }
+
+  .promo__details {
+    flex-direction: column;
+
+  }
+
+  .promo__offer {
+    width: 290px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-image: url(../img/frame-mobile.svg);
+  }
+
+  .promo__offer h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .promo__offer b {
+    max-width: 159px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .promo__offer--free b {
+    margin: 0 auto 28px;
+  }
+
+  .promo__offer a {
+    margin-left: 0;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
