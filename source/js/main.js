@@ -1,5 +1,5 @@
 'use strict';
-
+/* eslint-disable */
 (function () {
 
   var scrollBtn = document.querySelector('.first-screen__btn');
