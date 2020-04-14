@@ -1,29 +1,322 @@
+.membership {
+  background: $background;
+}
+
 .membership__body {
   max-width: 1366px;
-  padding: 120px 103px;
+  padding: 120px 103px 80px;
   margin: 0 auto;
 }
 
+.membership__wrap {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .membership h2 {
-  @include reset-list();
-  @include font(49px, 49px, 400);
-  margin-bottom: 53px;
-  font-family: $addition-font;
-  letter-spacing: 0.03em;
+  margin-bottom: 34px;
   text-align: center;
 }
 
 .membership__duration {
   @include reset-list();
-  @include font(20px, 30px, 400);
-  display: flex;
-  // margin: 0 auto;
-  margin-bottom: 50px;
-  // text-align: center;
+  @include font(20px, 30px);
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  min-width: 336px;
+  margin-bottom: 46px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.membership__item {
+  display: inline-block;
+  vertical-align: baseline;
+  min-height: 34px;
+  color: rgba(16, 38, 84, 0.5);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.membership__item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .membership__value {
+  @include reset-list();
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
 
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -156px;
+    right: -248px;
+
+    width: 430px;
+    height: 419px;
+
+    background-image: url("../img/member-disk-desktop@1x.webp"), url("../img/member-disk-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/member-disk-desktop@2x.webp"), url("../img/member-disk-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: 18%, 13%;
+      background-size: 496px auto;
+    }
+  }
 }
-// @media (max-width: $tablet-width) {}
-// @media (max-width: $mobile-width) {}
+
+.membership__value li {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  max-width: 360px;
+  width: calc((100% - 80px) / 3);
+
+  min-height: 448px;
+  margin-bottom: 40px;
+
+  text-align: center;
+  background-color: $main-color;
+  border: 7px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border: 7px solid;
+    border-style: inset;
+    border-image: linear-gradient(165deg, #d10a42 0%, #00359f 100%);
+    border-image-slice: 1;
+  }
+}
+
+.membership__value li:not(:nth-child(3n)) {
+  margin-right: 40px;
+}
+
+.membership__value h3 {
+  @include reset-list();
+  @include font(26px, 29px, 700);
+  margin: 57px 0 9px;
+}
+
+.membership__value span {
+  @include reset-list();
+  @include font(100px, 150px, 700);
+  display: inline-block;
+  vertical-align: baseline;
+  color: $price;
+  opacity: 0.48;
+}
+
+.membership__value b {
+  @include font(16px, 24px, 400);
+  margin-bottom: 11px;
+  color: #495a7d;
+}
+
+.membership__value p {
+  @include reset-list();
+  @include font(60px, 90px, 700);
+  margin: -94px 0 32px;
+  color: #103aae;
+  z-index: 3;
+}
+
+.membership__value a {
+  @include font(12px, 14px, 700);
+  position: relative;
+  padding: 24px 43px;
+  margin-bottom: 59px;
+  color: $base-text-color;
+  border: 2px solid $text;
+
+  &:focus {
+    opacity: 0.7;
+    outline: $outline;
+    border-color: transparent;
+  }
+}
+
+.membership__value li:hover a {
+  width: 206px;
+  height: 64px;
+  border: 0;
+  color: $main-color;
+  background: linear-gradient(110deg, #ed0233 15%, #003eb7 100%);
+}
+
+.membership__item.active {
+  position: relative;
+  color: $base-text-color;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: $red;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .membership__body {
+    max-width: $tablet-width;
+    padding: 100px 45px 60px;
+  }
+
+  .membership h2 {
+    margin-bottom: 29px;
+  }
+
+  .membership__duration {
+    @include font(18px, 27px);
+    min-width: 330px;
+    margin-bottom: 50px;
+  }
+
+  .membership__item:not(:last-child) {
+    margin-right: 15%;
+  }
+
+  .membership__value {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &::after {
+      bottom: -132px;
+      right: -89px;
+
+      width: 391px;
+      height: 390px;
+
+      background-image: url("../img/member-disk-tablet@1x.webp"), url("../img/member-disk-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/member-disk-tablet@2x.webp"), url("../img/member-disk-tablet@2x.png");
+      }
+    }
+  }
+
+  .membership__value li {
+    min-width: 442px;
+    min-height: 448px;
+
+    &:hover {
+      max-width: 442px;
+      min-height: 448px;
+    }
+  }
+
+  .membership__value li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .membership__body {
+    max-width: $mobile-width;
+    padding: 70px 15px 31px;
+  }
+
+  .membership h2 {
+    margin-bottom: 19px;
+  }
+
+  .membership__duration {
+    @include font(16px, 24px);
+    min-width: 293px;
+    margin-bottom: 39px;
+  }
+
+  .membership__item:not(:last-child) {
+    margin-right: 15%;
+  }
+
+  .membership__value {
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .membership__value li {
+    min-width: 290px;
+    min-height: 384px;
+
+
+    &:hover {
+      max-width: 290px;
+      min-height: 384px;
+    }
+  }
+
+  .membership__value li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .membership__value h3 {
+    @include font(22px, 24px, 700);
+    margin: 44px 0 9px;
+  }
+
+  .membership__value svg {
+    width: 24px;
+    height: 33px;
+  }
+
+  .membership__value b {
+    margin-bottom: 12px;
+  }
+
+  .membership__value span {
+    @include font(80px, 120px, 700);
+  }
+
+  .membership__value p {
+    @include font(48px, 72px, 700);
+    margin: -76px 0 29px;
+  }
+
+  .membership__value a {
+    margin-bottom: 0;
+  }
+}

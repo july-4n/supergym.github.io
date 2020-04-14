@@ -16,40 +16,57 @@
 }
 
 .first-screen__tel a {
-  @include font(26px, 26px, 400);
+  @include font(26px, 26px);
   display: inline-block;
   vertical-align: baseline;
+  margin-left: 15px;
   font-family: $addition-font;
   letter-spacing: 0.03em;
   color: $main-color;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: 3px solid #00359f;
+    outline-offset: 4px;
+  }
+}
+
+.first-screen__main-info {
+  display: flex;
 }
 
 .first-screen__info {
   display: flex;
-}
-
-.first-screen__text {
-  display: flex;
   flex-direction: column;
-  max-width: 397px;
+  width: 40%;
   padding-top: 117px;
   text-align: right;
   color: $main-color;
 }
 
-.first-screen__text span {
-  @include font(49px, 49px, 400);
+.first-screen__info span {
+  @include font(49px, 49px);
   display: inline-block;
-  margin-bottom: 12px;
   vertical-align: baseline;
+  margin: 0 36px 12px;
   font-family: $addition-font;
   text-transform: uppercase;
+  text-align: right;
+}
+
+.first-screen__text {
+  display: flex;
 }
 
 .first-screen__text h1 {
   @include reset-list();
   @include font(109px, 109px, 700);
-  margin-bottom: 52px;
+  flex-basis: 71%;
+  margin-bottom: 51px;
   font-family: $addition-font;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -59,33 +76,48 @@
 
 .first-screen__list {
   @include reset-list();
-  @include font(14px, 21px, 400);
-  position: absolute;
-  text-align: right;
+  @include font(14px, 21px);
+  display: flex;
+  flex-basis: 21%;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 113px;
+  margin: 122px -9% 0 18px;
   color: $main-color;
-  top: 356px;
-  left: 122px;
 }
 
 .first-screen__btn {
-  padding: 19.5px 53px;
-  margin-left: auto;
+  padding: 19.5px 54px;
+  margin: 0 31px 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: $outline;
+    border-color: transparent;
+  }
 }
 
+
 .first-screen__img {
+  flex: 1 0 auto;
   max-width: 500px;
-  margin-top: -5px;
-  margin-left: 63px;
+  margin: -5px 0 0 2.8%;
 }
 
 .first-screen__img img {
   display: block;
   width: 500px;
-  height: auto;
+  height: 556px;
 }
 
 @media (max-width: $tablet-width) {
   .first-screen__body {
+    max-width: 768px;
     padding: 0 45px;
   }
 
@@ -99,41 +131,43 @@
   }
 
   .first-screen__tel a {
-    @include font(24px, 24px, 400);
+    @include font(24px, 24px);
   }
 
-  .first-screen__info {
+  .first-screen__main-info {
     padding-top: 25px;
   }
 
-  .first-screen__text {
-    max-width: 323px;
+  .first-screen__info {
+    width: 48%;
     padding-top: 49px;
   }
 
-  .first-screen__text span {
-    @include font(34px, 34px, 400);
-    margin-bottom: 7px;
+  .first-screen__info span {
+    @include font(34px, 34px);
+    margin: 0 6px 7px;
   }
 
-  .first-screen__text h1 {
+  .first-screen__info h1 {
     @include font(86px, 86px, 700);
-    margin-bottom: 36px;
+    flex-basis: 84%;
+    margin-bottom: 37px;
   }
 
   .first-screen__list {
-    top: 269px;
-    left: 46px;
+    flex-basis: 50%;
+    margin: 89px -9% 0;
   }
 
   .first-screen__btn {
-    padding: 20px 29px;
+    padding: 19.5px 30.5px;
+    margin-right: 0;
   }
 
   .first-screen__img {
-    width: 324px;
-    margin-top: -7px;
-    margin-left: 31px;
+    max-width: 324px;
+    height: 390px;
+    margin: -7px 0 0 4%;
   }
 
   .first-screen__img img {
@@ -157,36 +191,37 @@
   }
 
   .first-screen__tel a {
-    @include font(20px, 20px, 400);
+    @include font(20px, 20px);
   }
 
-  .first-screen__info {
+  .first-screen__main-info {
     padding-top: 0;
   }
 
-  .first-screen__text {
-    max-width: 100%;
+  .first-screen__info {
+    width: 100%;
     padding-top: 73px;
   }
 
-  .first-screen__text span {
-    @include font(28px, 28px, 400);
+  .first-screen__info span {
+    @include font(28px, 28px);
     margin-bottom: 13px;
   }
 
-  .first-screen__text h1 {
+  .first-screen__info h1 {
     @include font(78px, 78px, 700);
     margin-bottom: 38px;
   }
 
   .first-screen__list {
-    top: 234px;
-    left: 15px;
+    flex-basis: 51%;
+    margin: 78px -12% 0 1px;
   }
 
   .first-screen__btn {
     width: 100%;
     padding: 20px 82px;
+    text-align: center;
   }
 
   .first-screen__img {

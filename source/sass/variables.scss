@@ -9,11 +9,14 @@ $addition-font: "BebasNeue", "Verdana", sans-serif;
 
 $white: #ffffff;
 $dark-blue: #102654;
-$black: #030A1A;
-$bright-blue: #2E35AC;
-$blue:#1C3374;
-$grey: #74819C;
+$black: #030a1a;
+$bright-blue: #2e35ac;
+$blue:#1c3374;
+$grey: #74819c;
+$grey-light: #ebebeb;
 $medium-blue: rgba(20, 54, 122, 0.5);
+$white-light: #f8f9fc;
+$red: #d10a42;
 
 $main-color: $white;
 $base-text-color: $dark-blue;
@@ -22,4 +25,6 @@ $shadow: $medium-blue;
 $decor: $bright-blue;
 $text: $blue;
 $line: $grey;
-
+$price: $grey-light;
+$background: $white-light;
+$outline: 2px solid $red;

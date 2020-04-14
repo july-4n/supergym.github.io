@@ -1,0 +1,21 @@
+.title {
+  @include reset-list();
+  @include font(49px, 49px, 700);
+  font-family: $addition-font;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $base-text-color;
+}
+
+@media (max-width: $tablet-width) {
+  .title {
+    @include font(42px, 42px, 700);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .title {
+    @include font(32px, 32px, 700);
+  }
+}

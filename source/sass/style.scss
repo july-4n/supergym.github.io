@@ -1,4 +1,3 @@
-@import "../../node_modules/slick-carousel/slick/slick";
 @import "normalize";
 @import "fonts";
 @import "mixins";
@@ -7,15 +6,15 @@
 @import "blocks/background";
 @import "blocks/first-screen";
 @import "blocks/btn";
+@import "blocks/title";
 @import "blocks/social";
 @import "blocks/gym";
 @import "blocks/membership";
+@import "blocks/tab";
 @import "blocks/announcement";
 @import "blocks/coaches";
 @import "blocks/benefits";
 @import "blocks/promo";
+@import "blocks/review";
 @import "blocks/contacts";
 @import "blocks/footer";
-
-// @media (max-width: $tablet-width) {}
-// @media (max-width: $mobile-width) {}

@@ -1,7 +1,5 @@
 .contacts__body {
   display: flex;
-  max-width: 1366px;
-  padding: 70px 0 0;
   margin: 0 auto;
 }
 
@@ -18,35 +16,35 @@
   border-top: 1px solid $line;
 }
 
-.contacts__promo-free,
-.contacts__info {
-  padding-left: 103px;
-  padding-right: 50px;
-  padding-top: 63px;
-  padding-bottom: 69px;
+.contacts__promo-free {
+  max-width: 683px;
+  padding: 9% 0 10% 103px;
+  margin-left: auto;
 }
 
-.contacts__promo-free h2,
 .contacts__info h2 {
+  width: 100%;
+  margin: 0 0 41px 15px;
+  color: $base-text-color;
+  text-align: left;
+}
+
+.contacts__promo-free h2 {
   @include reset-list();
-  @include font(49px, 64px, 700);
+  @include font(49px, 64px);
   margin-bottom: 32px;
   font-family: $addition-font;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: left;
   color: $main-color;
 }
 
 .contacts__info {
   display: flex;
   flex-wrap: wrap;
+  padding: 69px 0 63px 103px;
   background-color: $main-color;
-}
-
-.contacts__info h2 {
-  margin-left: 15px;
-  color: $base-text-color;
-  width: 100%;
 }
 
 .contacts__promo-free p {
@@ -54,45 +52,68 @@
 }
 
 .contacts__promo-free form {
-  width: 472px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 472px;
   max-width: 100%;
 }
 
 .contacts__item input {
-  width: 190px;
+  @include font(14px, 16px, 400);
+  width: 189px;
   padding-bottom: 6px;
   margin-bottom: 26px;
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
   border-bottom: 1px solid $line;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: $outline;
+  }
 }
 
 .contacts__item input::placeholder {
-  @include font(14px, 16px);
   color: $main-color;
   opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: $main-color;
 }
 
 .contacts__btn {
   @include font(14px, 16px, 700);
   padding: 16px 163px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border: 4px solid transparent;
+    outline: 4px solid red;
+    opacity: 0.4;
+  }
 }
 
 .contacts__info h4 {
   @include reset-list();
   @include font(16px, 24px, 700);
-  margin-left: 19px;
-  margin-bottom: 4px;
+  margin: 0 0 4px 19px;
 }
 
 .contacts__info p {
   @include reset-list();
   @include font(14px, 21px);
-  margin-left: 21px;
-  margin-bottom: 17px;
+  margin: 0 0 17px 21px;
 }
 
 .contacts__info p:last-child {
@@ -120,7 +141,7 @@
     width: 1px;
     height: 102px;
 
-    background-color: #74819C;
+    background-color: #74819c;
   }
 }
 
@@ -129,9 +150,18 @@
   margin-left: 20px;
   margin-bottom: 17px;
   color: $base-text-color;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: $outline;
+    outline-offset: 4px;
+  }
 }
 
-.contacts__connect a:last-child,
 .contacts__connect a:last-child {
   margin-bottom: 0;
 }
@@ -151,10 +181,9 @@
     border-top: none;
   }
 
-  .contacts__promo-free h2,
-  .contacts__info h2 {
-  @include font(42px, 42px, 700);
-}
+  .contacts__promo-free h2 {
+    @include font(42px, 42px, 700);
+  }
 
   .contacts__address {
     margin-right: 96px;
@@ -168,10 +197,11 @@
 
   .contacts__promo-free,
   .contacts__info {
-    padding-left: 133px;
-    padding-right: 50px;
-    padding-top: 71px;
-    padding-bottom: 70px;
+    padding: 71px 50px 67px 133px;
+  }
+
+  .contacts__promo-free {
+    max-width: 100%;
   }
 
   .contacts__promo-free form {
@@ -185,6 +215,15 @@
 
   .contacts__btn {
     padding: 16px 196px;
+  }
+
+  .contacts__info {
+    padding-bottom: 63px;
+  }
+
+  .contacts__info h2 {
+    margin-bottom: 32px;
+    margin-left: 0;
   }
 
   .contacts__info h4 {
@@ -210,10 +249,14 @@
     max-width: $mobile-width;
   }
 
-  .contacts__promo-free h2,
-  .contacts__info h2 {
-  @include font(32px, 32px, 700);
-}
+  .contacts__info {
+    flex-direction: column;
+  }
+
+  .contacts__promo-free h2 {
+    @include font(32px, 32px, 700);
+    margin-bottom: 34px;
+  }
 
   .contacts__address {
     margin-right: 0;
@@ -225,10 +268,7 @@
 
   .contacts__promo-free,
   .contacts__info {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 71px;
-    padding-bottom: 70px;
+    padding: 71px 15px 67px 15px;
   }
 
   .contacts__promo-free form {
@@ -241,7 +281,7 @@
 
   .contacts__item input {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   .contacts__btn {

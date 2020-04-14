@@ -52,7 +52,6 @@
   },
   "dependencies": {
     "concat": "^1.0.3",
-    "del": "^4.1.1",
-    "slick-carousel": "^1.8.1"
+    "del": "^4.1.1"
   }
 }

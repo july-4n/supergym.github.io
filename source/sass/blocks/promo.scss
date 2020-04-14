@@ -5,32 +5,25 @@
 }
 
 .promo h2 {
-  @include reset-list();
-  @include font(49px, 49px, 700);
   margin-bottom: 50px;
-  font-family: $addition-font;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   text-align: center;
 }
 
 .promo__main-info {
   display: flex;
+  width: 100%;
 }
 
 .promo__info {
   display: flex;
-  width: 100%;
+  width: calc(50% - 15px);
   margin-right: 3.5%;
 }
 
 .promo__text {
   width: 50%;
-  padding-top: 7%;
-  padding-bottom: 7%;
-  padding-left: 8%;
-  padding-right: 8%;
-  background-color: #ED0233;
+  padding: 7% 8%;
+  background-color: #ed0223;
 }
 
 .promo__text h3 {
@@ -49,7 +42,7 @@
 
 .promo__text p {
   @include reset-list();
-  @include font(18px, 25px, 400);
+  @include font(18px, 25px);
   max-width: 189px;
   margin-bottom: 187px;
   text-align: left;
@@ -64,6 +57,16 @@
   text-transform: uppercase;
   color: $main-color;
   border-bottom: 1px solid $main-color;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: 3px solid $red;
+    outline-offset: 4px;
+  }
 }
 
 .promo__img {
@@ -72,7 +75,7 @@
   height: auto;
 }
 
-.promo__img img{
+.promo__img img {
   display: block;
   width: 280px;
   height: 100%;
@@ -80,35 +83,30 @@
 }
 
 .promo__details {
+  width: calc(50% - 15px);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .promo__offer {
-  display: flex;
-  flex-direction: column;
-  width: 560px;
-  height: 211px;
-  text-align: left;
-  color: $text;
-  background-image: url(../img/fr.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  min-height: 211px;
+  padding: 13px 27px;
+  border: 7px solid;
+  border-image: linear-gradient(170deg, #d10a42 15%, #00359f 100%);
+  border-image-slice: 1;
 }
 
 .promo__offer h3 {
   @include reset-list();
   @include font(26px, 50px, 700);
-  margin: 18px 0 0 34px;
 }
 
 
-.promo__offer b {
+.promo__offer p {
   @include reset-list();
-  @include font(16px, 22px);
-  margin-bottom: 70px;
-  margin-left: 34px;
+  margin: 0 0 65px 0;
 }
 
 
@@ -117,7 +115,6 @@
   position: relative;
   display: inline;
   margin-bottom: 38px;
-  margin-left: 34px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $text;
@@ -135,6 +132,16 @@
 
     background-color: $text;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: 3px solid $red;
+    outline-offset: 4px;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -144,7 +151,6 @@
   }
 
   .promo h2 {
-    @include font(42px, 42px, 700);
     margin-bottom: 39px;
   }
 
@@ -153,6 +159,7 @@
   }
 
   .promo__info {
+    width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -162,34 +169,46 @@
     padding: 5% 6.5%;
   }
 
-  .promo__img img{
+  .promo__text h3 {
+    line-height: 48px;
+  }
+
+  .promo__img img {
     width: 399px;
   }
 
   .promo__details {
+    display: flex;
     flex-direction: row;
+    width: 100%;
   }
 
   .promo__offer {
     width: 324px;
-    background-image: url(../img/frame-tablet.svg);
   }
 
-  .promo__offer--free b {
+  .promo__offer h3 {
+    line-height: 48px;
+  }
+
+  .promo__offer p {
+    margin-bottom: 66px;
+  }
+
+  .promo__offer--free p {
     max-width: 153px;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .promo__body {
     width: 320px;
-    padding: 70px 15px;
+    padding: 70px 15px 41px;
   }
 
   .promo h2 {
-    @include font(32px, 32px, 700);
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   .promo__main-info {
@@ -208,6 +227,10 @@
     padding: 35px 0 45px;
   }
 
+  .promo__text h3 {
+    line-height: 44px;
+  }
+
   .promo__text p {
     text-align: center;
     margin: 0 auto 28px;
@@ -216,42 +239,39 @@
   .promo__text span {
     margin-bottom: 22px;
   }
-  .promo__img img{
+
+  .promo__img img {
     width: 290px;
   }
 
   .promo__details {
     flex-direction: column;
-
   }
 
   .promo__offer {
     width: 290px;
+    padding: 24px 0;
     margin-bottom: 30px;
     text-align: center;
-    background-image: url(../img/frame-mobile.svg);
   }
 
   .promo__offer h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-left: 0;
+    margin-bottom: 2px;
+    line-height: 46px;
   }
 
-  .promo__offer b {
+  .promo__offer p {
     max-width: 159px;
     margin: 0 auto;
-    margin-bottom: 28px;
+    margin-bottom: 21px;
     text-align: center;
   }
 
-  .promo__offer--free b {
-    margin: 0 auto 28px;
+  .promo__offer--free p {
+    margin: 0 auto 21px;
   }
 
   .promo__offer a {
-    margin-left: 0;
-
     &::after {
       left: 50%;
       transform: translateX(-50%);

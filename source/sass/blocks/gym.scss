@@ -16,22 +16,19 @@
 }
 
 .gym__info h2 {
-  @include reset-list();
-  @include font(49px, 49px, 700);
   margin-bottom: 5px;
-  font-family: $addition-font;
-  letter-spacing: 0.03em;
+  text-align: left;
 }
 
 .gym__info span {
-  @include font(18px, 27px, 400);
+  @include font(18px, 27px);
   display: inline-block;
   margin-bottom: 41px;
 }
 
 .gym__info p {
   @include reset-list();
-  @include font(16px, 24px, 400);
+  @include font(16px, 24px);
   margin-bottom: 8px;
 }
 
@@ -72,12 +69,24 @@
   height: 100px;
   background: transparent;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px $red;
+    outline: none;
+    opacity: 0.4;
+  }
 }
 
 @media (max-width: $tablet-width) {
   .gym__body {
     flex-direction: column;
-    padding: 100px 45px;
+    padding: 100px 45px 183px;
   }
 
   .gym__info {
@@ -87,9 +96,8 @@
   }
 
   .gym__info h2 {
-    @include font(42px, 42px, 400);
-
     margin-bottom: 7px;
+    text-align: center;
   }
 
   .gym__info span {
@@ -97,10 +105,9 @@
   }
 
   .gym__info p {
-    @include font(16px, 24px, 400);
+    @include font(16px, 24px);
     margin-bottom: 43px;
-    padding-left: 83px;
-    padding-right: 83px;
+    padding: 0 83px;
   }
 
   .gym__info p:last-child {
@@ -144,7 +151,7 @@
 
 @media (max-width: $mobile-width) {
   .gym__body {
-    padding: 70px 0;
+    padding: 70px 0 110px;
   }
 
   .gym__info {
@@ -153,8 +160,8 @@
   }
 
   .gym__info h2 {
-    @include font(32px, 32px, 400);
     margin-bottom: 3px;
+    text-align: left;
   }
 
   .gym__info span {
@@ -172,9 +179,10 @@
   }
 
   .gym__video {
+    position: relative;
     width: 320px;
     height: 167px;
-    top: 353px;
+    top: 40px;
   }
 
   .gym__play-btn {

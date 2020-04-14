@@ -1,18 +1,252 @@
 .coaches__body {
   max-width: 1366px;
-  padding: 0 47px 120px 47px;
+  padding: 0 46px 115px;
   margin: 0 auto;
 }
 
 .coaches__body h2 {
-  @include reset-list();
-  @include font(49px, 49px, 700);
-  margin-left: 58px;
-  margin-bottom: 62px;
-  font-family: $addition-font;
-  letter-spacing: 0.03em;
+  margin: 0 0 49px 58px;
+  text-align: left;
 }
 
 .coaches__slider {
+  position: relative;
+  padding: 0 40px;
+}
+
+.coaches__slider .slick-track {
   display: flex;
+  align-items: flex-start;
+}
+
+.coaches__slider .slick-list {
+  overflow: hidden;
+}
+
+.coaches__item {
+  position: relative;
+  display: block;
+  max-width: 304px;
+  padding: 0 19px;
+}
+
+.coaches__item img {
+  display: block;
+  height: 294px;
+}
+
+.coaches__item p {
+  @include font(18px, 27px);
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $main-color;
+}
+
+.coaches__info {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 19px;
+  width: 260px;
+  padding: 50px 40px 54px;
+  text-align: center;
+  color: $main-color;
+  background-color: rgba(16, 38, 84, 0.89);
+  cursor: pointer;
+}
+
+.coaches__info h3 {
+  @include reset-list();
+  @include font(18px, 27px);
+}
+
+.coaches__info span {
+  @include font(16px, 24px);
+  display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: 30px;
+  color: #b6bdcc;
+}
+
+.coaches__info ul {
+  @include reset-list();
+  @include font(14px, 18px);
+  padding-left: 32px;
+  text-align: left;
+}
+
+.coaches__info li:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.coaches__item li {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -17px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background-color: $main-color;
+  }
+}
+
+.coaches__slider .coaches__info {
+  display: none;
+}
+
+.coaches__item:hover .coaches__info {
+  display: block;
+}
+
+.coaches__item:hover p {
+  display: none;
+}
+
+.coaches__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 16px;
+  height: 32px;
+  margin-top: -16px;
+  font-size: 0;
+  border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+    outline: $outline;
+    border-color: transparent;
+  }
+}
+
+.coaches__slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/arrow-left.svg") 0 0 / 100% no-repeat;
+}
+
+.coaches__slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/arrow-right.svg") 0 0 / 100% no-repeat;
+}
+
+@media (max-width: $tablet-width) {
+  .coaches__body {
+    max-width: 768px;
+    padding: 0 46px 100px;
+  }
+
+  .coaches__body h2 {
+    margin-bottom: 39px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .coaches__slider {
+    padding: 0 36px;
+    margin: 0 auto;
+  }
+
+  .coaches__item {
+    width: 302px;
+    max-height: 289px;
+    padding: 0 18px;
+    margin: 0 auto;
+  }
+
+  .coaches__item li {
+    &::before {
+      top: 6px;
+      left: -17px;
+    }
+  }
+
+  .coaches__item img {
+    width: 304px;
+  }
+
+  .coaches__item p {
+    bottom: 0;
+  }
+
+  .coaches__info {
+    width: 268px;
+    padding: 52px 18px 54px;
+  }
+
+  .coaches__info h3 {
+    line-height: 23px;
+  }
+
+  .coaches__info span {
+    margin-bottom: 34px;
+  }
+
+  .coaches__info ul {
+    padding-left: 54px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .coaches__body {
+    padding: 0 15px 64px;
+  }
+
+  .coaches__body h2 {
+    margin-bottom: 42px;
+  }
+
+  .coaches__slider {
+    padding: 0 13px;
+  }
+
+  .coaches__slider .slick-arrow {
+    width: 10px;
+    height: 25px;
+    margin-top: -15px;
+  }
+
+  .coaches__slider .slick-arrow.slick-prev {
+    background: url("../img/arrow-mobile-left.svg") 0 0 / 100% no-repeat;
+  }
+
+  .coaches__slider .slick-arrow.slick-next {
+    background: url("../img/arrow-mobile-right.svg") 0 0 / 100% no-repeat;
+  }
+
+  .coaches__item {
+    width: 262px;
+    padding: 0 18px;
+  }
+
+  .coaches__item img {
+    width: 262px;
+    height: 274px;
+  }
+
+  .coaches__item p {
+    @include font(16px, 22px);
+  }
+
+  .coaches__info {
+    width: 226px;
+    min-height: 274px;
+    padding: 43px 18px 18px;
+  }
+
+  .coaches__info ul {
+    padding-left: 33px;
+  }
 }
