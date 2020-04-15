@@ -1,6 +1,6 @@
 .first-screen__body {
-  max-width: 1366px;
-  padding: 0 103px 51px;
+  max-width: 1161px;
+  padding-bottom: 51px;
   margin: 0 auto;
 }
 
@@ -153,6 +153,7 @@
 
   .first-screen__info h1 {
     @include font(78px, 78px, 700);
+    max-width: 390px;
     margin-bottom: 38px;
   }
 

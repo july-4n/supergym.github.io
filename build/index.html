@@ -16,72 +16,76 @@
 <body>
   <div class="wrapper">
     <div class="content">
-      <main>
-        <section class="first-screen">
-          <div class="background">
-            <div class="first-screen__body">
-              <div class="first-screen__header">
-                <a class="first-screen__logo">
-                  <img src="img/logo.svg" width="89" height="20" alt="Лого фитнес центра Supergym">
+      <div class="inner-background">
+        <header class="page-header">
+          <div class="page-header__body">
+            <div class="page-header__main">
+              <a class="page-header__logo">
+                <img src="img/logo.svg" width="89" height="20" alt="Лого фитнес центра Supergym">
+              </a>
+              <div class="page-header__tel">
+                <h3 class="visually-hidden">Наш телефон</h3>
+                <a href="tel:+78005555555">
+                  <span>8-800-555-55-55</span>
                 </a>
-                <div class="first-screen__tel">
-                  <h3 class="visually-hidden">Наш телефон</h3>
-                  <a href="tel:+78005555555">
-                    <span>8-800-555-55-55</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="first-screen">
+          <div class="first-screen__body">
+            <div class="first-screen__main-info">
+              <div class="first-screen__info">
+                <span>Омск</span>
+                <div class="first-screen__text">
+                  <ul class="first-screen__list">
+                    <li>Тренажёрный зал</li>
+                    <li>Групповые занятия</li>
+                    <li>Кардио-зона</li>
+                  </ul>
+                  <h1>Фитнес центр</h1>
+                </div>
+                <a class="first-screen__btn btn" href="#" tabindex="0">Купить абонемент</a>
+              </div>
+              <div class="first-screen__img">
+                <picture>
+                    <!-- 1х: 324px; 2x: 648px -->
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/man-tablet@1x.webp 1x, img/man-tablet@2x.webp 2x">
+                    <!-- 1х: 500px; 2x: 1000px -->
+                  <source type="image/webp" srcset="img/man-desktop@1x.webp 1x, img/man-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/man-tablet@1x.jpg 1x, img/man-tablet@2x.jpg 2x">
+                  <img src="img/man-desktop@1x.jpg" srcset="img/man-desktop@2x.jpg 2x" width="500" height="556" alt="Изображение мужчины в спортивной форме">
+                </picture>
+              </div>
+              <h3 class="visually-hidden">Социальные сети</h3>
+              <ul class="social">
+                <li>
+                  <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
+                    <svg class="social__icon social__icon--facebook" width="13" height="9">
+                      <use xlink:href="img/sprite_auto.svg#icon-fb-desktop"></use>
+                    </svg>
                   </a>
-                </div>
-              </div><!--first-screen__header-->
-              <div class="first-screen__main-info">
-                <div class="first-screen__info">
-                  <span>Омск</span>
-                  <div class="first-screen__text">
-                    <ul class="first-screen__list">
-                      <li>Тренажёрный зал</li>
-                      <li>Групповые занятия</li>
-                      <li>Кардио-зона</li>
-                    </ul>
-                    <h1>Фитнес центр</h1>
-                  </div>
-                  <a class="first-screen__btn btn" tabindex="0">Купить абонимент</a>
-                </div>
-                <div class="first-screen__img">
-                  <picture>
-                      <!-- 1х: 324px; 2x: 648px -->
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="img/man-tablet@1x.webp 1x, img/man-tablet@2x.webp 2x">
-                      <!-- 1х: 500px; 2x: 1000px -->
-                    <source type="image/webp" srcset="img/man-desktop@1x.webp 1x, img/man-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/man-tablet@1x.jpg 1x, img/man-tablet@2x.jpg 2x">
-                    <img src="img/man-desktop@1x.jpg" srcset="img/man-desktop@2x.jpg 2x" width="500" height="556" alt="Изображение мужчины в спортивной форме">
-                  </picture>
-                </div>
-                <h3 class="visually-hidden">Социальные сети</h3>
-                <ul class="social">
-                  <li>
-                    <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
-                      <svg class="social__icon social__icon--facebook" width="13" height="9">
-                        <use xlink:href="img/sprite_auto.svg#icon-fb-desktop"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#"><span class="visually-hidden">Мы в Вконтакте</span>
-                      <svg class="social__icon social__icon--vk" width="14" height="9">
-                        <use xlink:href="img/sprite_auto.svg#icon-vk-desktop"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#"><span class="visually-hidden">Мы в Инстаграмме</span>
-                      <svg class="social__icon social__icon--instagram" width="14" height="11">
-                        <use xlink:href="img/sprite_auto.svg#icon-ig-desktop"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div><!--first-screen__info-->
-            </div><!--first-screen___body-->
-          </div><!--background-->
+                </li>
+                <li>
+                  <a href="#"><span class="visually-hidden">Мы в Вконтакте</span>
+                    <svg class="social__icon social__icon--vk" width="14" height="9">
+                      <use xlink:href="img/sprite_auto.svg#icon-vk-desktop"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><span class="visually-hidden">Мы в Инстаграмме</span>
+                    <svg class="social__icon social__icon--instagram" width="14" height="11">
+                      <use xlink:href="img/sprite_auto.svg#icon-ig-desktop"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div><!--first-screen__main-info-->
+          </div><!--first-screen___body-->
         </section>
+      </div>
+      <main>
         <section class="gym">
           <div class="gym__body">
             <div class="gym__info">
@@ -118,7 +122,7 @@
                   <source type="image/webp" srcset="img/gym-video-desktop@1x.webp 1x, img/gym-video-desktop@2x.webp 2x">
                   <source media="(max-width: 767px)" srcset="img/gym-video-mobile@1x.jpg 1x, img/gym-video-mobile@2x.jpg 2x">
                   <source media="(max-width: 1199px)" srcset="img/gym-video-tablet@1x.jpg 1x, img/gym-video-tablet@2x.jpg 2x">
-                  <img src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg 2x" width="364" height="228" alt="">
+                  <img src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg 2x" width="364" height="228" alt="Фотография тренажерного зала">
                 </picture>
               </div>
               <button class="gym__play-btn" type="button">
@@ -131,11 +135,11 @@
           <div class="membership__body">
             <div class="membership__wrap">
               <h2 class="title">Абонементы</h2>
-              <ul class="membership__duration">
-                <li class="membership__item active" data-tab-name="tab-1">1 месяц</li>
-                <li class="membership__item" data-tab-name="tab-2">6 месяцев</li>
-                <li class="membership__item" data-tab-name="tab-3">12 месяцев</li>
-              </ul>
+              <div class="membership__duration">
+                <button class="membership__item active" type="button" data-tab-name="tab-1">1 месяц</button>
+                <button class="membership__item" type="button" data-tab-name="tab-2">6 месяцев</button>
+                <button class="membership__item" type="button" data-tab-name="tab-3">12 месяцев</button>
+              </div>
             </div>
             <ul class="membership__value active tab tab-1">
               <li>
@@ -294,7 +298,7 @@
                   <div class="coaches__info">
                     <h3>Анна Павлова</h3>
                     <span>CrossFit</span>
-                    <ul class="coach__card">
+                    <ul class="coaches__card">
                       <li>Certified Level 3 Trainer</li>
                       <li>Победитель чемпионата России по CrossFit</li>
                       <li>Опыт — 6 лет</li>
@@ -313,7 +317,7 @@
                   <div class="coaches__info">
                     <h3>Алексей Лавров</h3>
                     <span>CrossFit</span>
-                    <ul class="coach__card">
+                    <ul class="coaches__card">
                       <li>Certified Level 3 Trainer</li>
                       <li>Победитель чемпионата России по CrossFit</li>
                       <li>Опыт — 6 лет</li>
@@ -332,7 +336,7 @@
                   <div class="coaches__info">
                     <h3>Александр Пашков</h3>
                     <span>CrossFit</span>
-                    <ul class="coach__card">
+                    <ul class="coaches__card">
                       <li>Certified Level 3 Trainer</li>
                       <li>Победитель чемпионата России по CrossFit</li>
                       <li>Опыт — 6 лет</li>
@@ -351,7 +355,7 @@
                   <div class="coaches__info">
                     <h3>Мария Кетова</h3>
                     <span>CrossFit</span>
-                    <ul class="coach__card">
+                    <ul class="coaches__card">
                       <li>Certified Level 3 Trainer</li>
                       <li>Победитель чемпионата России по CrossFit</li>
                       <li>Опыт — 6 лет</li>
@@ -370,7 +374,7 @@
                   <div class="coaches__info">
                     <h3>Анна Павлова</h3>
                     <span>CrossFit</span>
-                    <ul class="coach__card">
+                    <ul class="coaches__card">
                       <li>Certified Level 3 Trainer</li>
                       <li>Победитель чемпионата России по CrossFit</li>
                       <li>Опыт — 6 лет</li>
@@ -578,11 +582,11 @@
                 <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
                   <p class="contacts__item">
                     <input type="text" id="user-name" placeholder="Имя" required="">
-                    <label for="user-name">Имя</label>
+                    <label class="visually-hidden" for="user-name">Имя</label>
                   </p>
                   <p class="contacts__item">
-                    <input type="tel" id="user-phone" placeholder="Телефон" required="">
-                    <label for="user-phone">Телефон</label>
+                    <input type="tel" id="user-phone" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required="">
+                    <label class="visually-hidden" for="user-phone">Телефон</label>
                   </p>
                   <button class="contacts__btn btn" type="submit">Отправить</button>
                 </form>
@@ -620,7 +624,7 @@
           <h3 class="visually-hidden">Навигация</h3>
           <ul>
             <li><a href="#">Услуги</a></li>
-            <li><a href="#">Абонименты</a></li>
+            <li><a href="#">Абонементы</a></li>
             <li><a href="#">Акции</a></li>
             <li><a href="#">Тренеры</a></li>
             <li><a href="#">Расписание</a></li>

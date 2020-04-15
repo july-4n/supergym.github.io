@@ -45,6 +45,7 @@
   display: inline-block;
   vertical-align: baseline;
   min-height: 34px;
+  padding: 0;
   color: rgba(16, 38, 84, 0.5);
   background-color: transparent;
   border: none;
@@ -114,7 +115,6 @@
   text-align: center;
   background-color: $main-color;
   border: 7px solid transparent;
-  cursor: pointer;
 
   &:hover {
     border: 7px solid;

@@ -4,28 +4,31 @@
 
   var scrollBtn = document.querySelector('.first-screen__btn');
   var membership = document.querySelector('.membership');
+  var phoneFormInput = document.querySelector('#user-phone');
 
   var tab = function () {
-    var tabNav = document.querySelectorAll('.membership__item');
+    var chooseTab = document.querySelectorAll('.membership__item');
     var tabContent = document.querySelectorAll('.tab');
     var tabName;
 
-    tabNav.forEach(function (item) {
+    chooseTab.forEach(function (item) {
       item.addEventListener('click', selectTabNav);
     });
 
     function selectTabNav() {
-      tabNav.forEach(function (item) {
+      chooseTab.forEach(function (item) {
         item.classList.remove('active');
       });
+
       this.classList.add('active');
       tabName = this.getAttribute('data-tab-name');
       selectTabContent(tabName);
     }
 
-    function selectTabContent(tabName) {
+    function selectTabContent() {
       tabContent.forEach(function (item) {
-        item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
+        var result = item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
+        return (result);
       });
     }
   };
@@ -37,6 +40,16 @@
       window.scrollBy({top: (membership.offsetTop - window.pageYOffset), left: 0, behavior: 'smooth'});
     });
   }
+
+  //  Маска номера телефона
+
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+
+  /* eslint-disable */
+
+  var maskForm = IMask(phoneFormInput, maskOptions);
 
   $('.coaches__slider').slick({
     arrows: true,
@@ -75,9 +88,17 @@
     responsive: [
       {
         breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
       },
       {
         breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
       }
     ],
   });

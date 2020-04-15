@@ -1,7 +1,7 @@
 .review__body {
   position: relative;
-  max-width: 1366px;
-  padding: 0 320px 119px;
+  max-width: 1160px;
+  padding: 0 0 119px;
   margin: 0 auto;
 }
 
@@ -9,9 +9,9 @@
   margin-bottom: 50px;
 }
 
-.review__slider .slick-slider {
+.review__slider {
   position: relative;
-  min-width: 0;
+  max-width: 672px;
   margin: 0 auto;
 }
 
@@ -54,11 +54,11 @@
 
 .review__slider .slick-arrow {
   position: absolute;
-  top: 223px;
+  top: 50%;
   z-index: 10;
   width: 16px;
   height: 32px;
-  margin: -16px 0 0 0;
+  margin-top: -16px;
   font-size: 0;
   border: none;
   cursor: pointer;
@@ -75,12 +75,12 @@
 }
 
 .review__slider .slick-arrow.slick-prev {
-  left: 347px;
+  left: 0;
   background: url("../img/arrow-left.svg") 0 0 / 100% no-repeat;
 }
 
 .review__slider .slick-arrow.slick-next {
-  right: 347px;
+  right: 0;
   background: url("../img/arrow-right.svg") 0 0 / 100% no-repeat;
 }
 
@@ -112,16 +112,12 @@
     max-width: 328px;
   }
 
-  .review__slider .slick-arrow {
-    top: 203px;
-  }
-
   .review__slider .slick-arrow.slick-prev {
-    left: 45px;
+    left: -4px;
   }
 
   .review__slider .slick-arrow.slick-next {
-    right: 45px;
+    right: -4px;
   }
 }
 
@@ -155,18 +151,18 @@
   }
 
   .review__slider .slick-arrow {
-    top: 242px;
+    // top: 242px;
     width: 10px;
     height: 29px;
   }
 
   .review__slider .slick-arrow.slick-prev {
-    left: 15px;
+    left: -30px;
     background: url("../img/arrow-mobile-left.svg") 0 0 / 100% no-repeat;
   }
 
   .review__slider .slick-arrow.slick-next {
-    right: 15px;
+    right: -30px;
     background: url("../img/arrow-mobile-right.svg") 0 0 / 100% no-repeat;
   }
 }

@@ -55,7 +55,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 472px;
+  width: 410px;
   max-width: 100%;
 }
 
@@ -201,7 +201,7 @@
   }
 
   .contacts__promo-free form {
-    width: 531px;
+    width: 472px;
   }
 
   .contacts__item input {
@@ -247,6 +247,7 @@
 
   .contacts__info {
     flex-direction: column;
+    padding: 71px 15px 66px 15px;
   }
 
   .contacts__promo-free h2 {
@@ -262,9 +263,8 @@
     }
   }
 
-  .contacts__promo-free,
-  .contacts__info {
-    padding: 71px 15px 67px 15px;
+  .contacts__promo-free {
+    padding: 71px 15px 69px 15px;
   }
 
   .contacts__promo-free form {
@@ -277,7 +277,7 @@
 
   .contacts__item input {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 36px;
   }
 
   .contacts__btn {
