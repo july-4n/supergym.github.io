@@ -64,6 +64,7 @@
   width: 189px;
   padding-bottom: 6px;
   margin-bottom: 26px;
+  color: $main-color;
   background: transparent;
   border: 2px solid transparent;
   border-bottom: 1px solid $line;
@@ -74,7 +75,6 @@
   }
 
   &:focus {
-    opacity: 0.4;
     outline: $outline;
   }
 }
@@ -82,10 +82,6 @@
 .contacts__item input::placeholder {
   color: $main-color;
   opacity: 1;
-}
-
-input:-ms-input-placeholder {
-  color: $main-color;
 }
 
 .contacts__btn {

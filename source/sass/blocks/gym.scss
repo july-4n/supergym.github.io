@@ -23,6 +23,7 @@
 .gym__info span {
   @include font(18px, 27px);
   display: inline-block;
+  vertical-align: baseline;
   margin-bottom: 41px;
 }
 

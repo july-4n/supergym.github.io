@@ -20,7 +20,6 @@
 }
 
 .membership__duration {
-  @include reset-list();
   @include font(20px, 30px);
   position: relative;
   display: inline-block;
@@ -47,10 +46,18 @@
   vertical-align: baseline;
   min-height: 34px;
   color: rgba(16, 38, 84, 0.5);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+
 
   &:hover {
     opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $red;
+    outline-style: solid;
   }
 }
 

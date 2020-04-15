@@ -1,9 +1,10 @@
 @import "normalize";
 @import "fonts";
-@import "mixins";
 @import "variables";
+@import "mixins";
 @import "global";
-@import "blocks/background";
+@import "blocks/inner-background";
+@import "blocks/page-header";
 @import "blocks/first-screen";
 @import "blocks/btn";
 @import "blocks/title";

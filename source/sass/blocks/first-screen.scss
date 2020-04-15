@@ -4,37 +4,6 @@
   margin: 0 auto;
 }
 
-.first-screen__header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-}
-
-.first-screen__logo {
-  width: 89px;
-  height: 20px;
-}
-
-.first-screen__tel a {
-  @include font(26px, 26px);
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: 15px;
-  font-family: $addition-font;
-  letter-spacing: 0.03em;
-  color: $main-color;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:focus {
-    opacity: 0.4;
-    outline: 3px solid #00359f;
-    outline-offset: 4px;
-  }
-}
-
 .first-screen__main-info {
   display: flex;
 }
@@ -121,19 +90,6 @@
     padding: 0 45px;
   }
 
-  .first-screen__header {
-    padding-top: 40px;
-  }
-
-  .first-screen__logo {
-    width: 82px;
-    height: 17px;
-  }
-
-  .first-screen__tel a {
-    @include font(24px, 24px);
-  }
-
   .first-screen__main-info {
     padding-top: 25px;
   }
@@ -179,19 +135,6 @@
 @media (max-width: $mobile-width) {
   .first-screen__body {
     padding: 0 15px;
-  }
-
-  .first-screen__header {
-    padding-top: 20px;
-  }
-
-  .first-screen__logo {
-    width: 68px;
-    height: 15px;
-  }
-
-  .first-screen__tel a {
-    @include font(20px, 20px);
   }
 
   .first-screen__main-info {

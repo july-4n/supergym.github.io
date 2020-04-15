@@ -1,21 +1,21 @@
 'use strict';
-/* eslint-disable */
+
 (function () {
 
   var scrollBtn = document.querySelector('.first-screen__btn');
   var membership = document.querySelector('.membership');
 
   var tab = function () {
-    var tabNav = document.querySelectorAll('.membership__item');
+    var chooseTab = document.querySelectorAll('.membership__item');
     var tabContent = document.querySelectorAll('.tab');
     var tabName;
 
-    tabNav.forEach(function (item) {
+    chooseTab.forEach(function (item) {
       item.addEventListener('click', selectTabNav);
     });
 
     function selectTabNav() {
-      tabNav.forEach(function (item) {
+      chooseTab.forEach(function (item) {
         item.classList.remove('active');
       });
       this.classList.add('active');
@@ -23,7 +23,7 @@
       selectTabContent(tabName);
     }
 
-    function selectTabContent(tabName) {
+    function selectTabContent() {
       tabContent.forEach(function (item) {
         item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
       });
