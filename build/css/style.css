@@ -1825,8 +1825,7 @@ body {
 
 .promo__text {
   width: 50%;
-  padding: 7%;
-  padding-left: 8%;
+  padding: 7% 7% 7% 8%;
   background-color: #ed0223; }
 
 .promo__text h3 {
