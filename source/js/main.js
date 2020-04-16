@@ -38,11 +38,13 @@
 
   // Скролл
 
-  if (scrollBtn) {
-    scrollBtn.addEventListener('click', function () {
-      window.scrollBy({top: (membership.offsetTop - window.pageYOffset), left: 0, behavior: 'smooth'});
-    });
-  }
-
-
+  scrollBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if(membership) {
+      membership.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  })
 })();
